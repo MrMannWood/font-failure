@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private val FONTS = arrayOf(
-            "Roboto",
-            "Besley",
-            "Atkinson Hyperlegible",
-            "Urbanist",
-            "Open Sans",
-            "Lato",
-            "Oswald",
-            "Raleway"
+            "Roboto" to "https://fonts.google.com/specimen/Roboto",
+            "Besley" to "https://fonts.google.com/specimen/Besley",
+            "Atkinson Hyperlegible" to "https://fonts.google.com/specimen/Atkinson+Hyperlegible",
+            "Urbanist" to "https://fonts.google.com/specimen/Urbanist",
+            "Open Sans" to "https://fonts.google.com/specimen/Open+Sans",
+            "Lato" to "https://fonts.google.com/specimen/Lato",
+            "Oswald" to "https://fonts.google.com/specimen/Oswald",
+            "Raleway" to "https://fonts.google.com/specimen/Raleway"
         )
     }
 
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getNextFont(): String {
-        val f = FONTS[fontIndex]
+        val f = FONTS[fontIndex].first
         fontIndex++
         if (fontIndex >= FONTS.size) {
             fontIndex = 0
